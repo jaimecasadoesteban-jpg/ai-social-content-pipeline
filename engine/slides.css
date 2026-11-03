@@ -1,0 +1,47 @@
+/* Carousel slides (1080x1350, 4:5) and covers (1080x1920). Reuses the pieces from engine.css. */
+@import url(engine.css);
+html,body{height:auto;overflow:visible;background:#000}
+.slide{position:relative;width:1080px;height:1350px;overflow:hidden;background:var(--bg);margin-bottom:20px}
+.slide.cover9{height:1920px}
+.slide .glow1,.slide .glow2{position:absolute;width:1100px;height:1100px;border-radius:50%;filter:blur(40px);opacity:var(--glow-op,.38)}
+.slide .glow1{left:-520px;top:-300px;background:radial-gradient(circle,#10B981 0%,rgba(16,185,129,0) 62%)}
+.slide .glow2{right:-560px;bottom:-420px;background:radial-gradient(circle,#0EA5E9 0%,rgba(14,165,233,0) 62%)}
+.slide .top{position:absolute;top:64px;left:80px;right:80px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.slide .top .brand{font-weight:800;font-size:40px;letter-spacing:-1px}
+.slide .top .n{font-weight:700;font-size:32px;color:var(--mut)}
+.slide .head{position:absolute;top:170px;left:80px;right:80px;z-index:4}
+.slide .kick{display:inline-block;font-weight:800;font-size:34px;letter-spacing:1px;text-transform:uppercase;padding:10px 22px;border-radius:999px;background:var(--grad);color:#fff;margin-bottom:22px}
+.slide .tt{font-weight:800;font-size:76px;line-height:1.06;letter-spacing:-2px}
+.slide .tt.big{font-size:100px;letter-spacing:-3px}
+.slide .vis{position:absolute;left:60px;right:60px;bottom:70px;top:var(--vt,520px);display:flex;align-items:center;justify-content:center;z-index:3}
+.mphone{position:relative;width:620px;border-radius:70px 70px 0 0;border:12px solid var(--frame);border-bottom:none;background:var(--wa-bg);overflow:hidden;align-self:flex-end;box-shadow:0 30px 90px var(--shadow)}
+.mphone .island{position:absolute;top:18px;left:50%;width:150px;height:40px;margin-left:-75px;border-radius:24px;background:#000;z-index:5}
+.mphone .wa-head{height:160px;padding-bottom:20px}
+.mphone .wa-head .av{width:72px;height:72px;font-size:34px}
+.mphone .wa-head .nm{font-size:36px}
+.mphone .wa-body{top:176px}
+.mphone .bub{font-size:38px}
+.mphone .bub .tm,.mphone .bub .by{font-size:24px}
+.vs{display:flex;gap:30px;width:100%;align-items:stretch}
+.vs>div{flex:1;border-radius:36px;padding:40px 36px;display:flex;flex-direction:column;gap:24px}
+.vs .old{background:var(--sf);border:2px solid var(--line)}
+.vs .new{background:linear-gradient(160deg,rgba(16,185,129,.35),rgba(14,165,233,.25));border:2px solid #14B8A6}
+.vs .lbl{font-weight:800;font-size:30px;letter-spacing:1px;text-transform:uppercase;color:var(--mut)}
+.vs .new .lbl{color:var(--wa-by)}
+.vs .txt2{font-weight:700;font-size:46px;line-height:1.15}
+.vs .ic{margin-top:auto;display:flex;justify-content:center}
+.records{display:flex;flex-direction:column;gap:20px;width:880px}
+.record{display:flex;align-items:center;gap:26px;padding:24px 32px}
+.record .av{flex:none;width:90px;height:90px;border-radius:50%;background:var(--slot);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:40px;color:var(--soft)}
+.record .nm{font-weight:800;font-size:42px}
+.record .lv{font-weight:600;font-size:32px;color:var(--mut)}
+.record .pill{font-weight:700;font-size:26px;color:var(--soft);background:var(--slot);padding:8px 16px;border-radius:999px}
+.bars{display:flex;align-items:flex-end;gap:20px;height:220px}
+.bars i{display:block;width:62px;border-radius:12px 12px 4px 4px;background:var(--grad)}
+.agenda.static{position:relative;left:auto;right:auto;width:100%}
+.endc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;z-index:4;padding:0 80px}
+.mini{position:relative;width:130px;height:224px;border-radius:30px;border:9px solid var(--stroke)}
+.mini .badge{width:70px;height:70px;font-size:38px;top:-30px;right:-34px}
+.cv{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:30px;padding:0 70px;z-index:3}
+.cv .brand{position:absolute;top:300px;left:50%;transform:translateX(-50%);font-weight:800;font-size:52px;letter-spacing:-1px;white-space:nowrap}
+.huge{font-weight:800;line-height:.95;letter-spacing:-8px}

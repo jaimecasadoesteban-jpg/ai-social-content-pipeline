@@ -1,0 +1,12 @@
+{
+  "name": "ai-social-content-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-agent content pipeline: renders short videos and carousels from HTML, with automated QA.",
+  "scripts": {
+    "check": "node --check pipeline/render_frames.js && node --check pipeline/preview.js && node --check pipeline/export_slides.js && node --check engine/engine.js && node --check engine/slides-ui.js"
+  },
+  "dependencies": {
+    "playwright-core": "1.63.0"
+  }
+}

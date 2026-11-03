@@ -1,0 +1,115 @@
+<!doctype html>
+<!-- Fictional demo content: Acme Assist and every name, time and number on screen are made up. -->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../../engine/engine.css">
+<style>
+  .bars{display:flex;align-items:flex-end;gap:26px;height:360px;padding:0 20px}
+  .bar{width:110px;border-radius:18px 18px 6px 6px;background:var(--grad);transform-origin:50% 100%}
+  .rec{width:860px;display:flex;align-items:center;gap:28px;padding:26px 34px}
+  .rec .av{flex:none;width:96px;height:96px;border-radius:50%;background:var(--slot);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:42px;color:var(--soft)}
+  .rec .nm{font-weight:800;font-size:44px}
+  .rec .lv{font-weight:600;font-size:34px;color:var(--mut)}
+  .rec .pill{font-weight:700;font-size:28px;color:var(--soft);background:var(--slot);padding:10px 18px;border-radius:999px;white-space:nowrap}
+  .ev-pos{left:calc(110px + (100% - 110px) / 5 * var(--c) + 6px);width:calc((100% - 110px) / 5 - 12px);top:calc(56px + 92px * var(--r) + 6px);height:80px}
+  .phone .bub{font-size:46px}
+  .phone .bub .tm,.phone .bub .by{font-size:28px}
+</style></head>
+<body>
+<div id="bg"><div class="blob b1"></div><div class="blob b2"></div></div>
+<div class="logo">Acme<span class="g">Assist</span></div>
+
+<!-- 1. Big statement: the hook is already there on frame 0 -->
+<section class="scene" data-type="Big statement" data-start="0"><div class="cam">
+  <div class="safe" style="bottom:620px">
+    <div class="h0 txt">Your next patients</div>
+    <div class="h0 g txt">already paid you once.</div>
+    <div class="ul" style="width:620px;margin-top:-8px" data-in="@paid-0.1" data-anim="grow" data-dur="0.6"></div>
+  </div>
+  <div class="center p1 txt" style="top:1240px" data-in="@they sit-0.1">They sit in your records.</div>
+  <div class="center h3 txt" style="top:1320px" data-in="@nobody writes-0.4"><span class="g">Nobody</span> writes to them.</div>
+  <div class="ul" style="position:absolute;left:300px;top:1410px;width:480px" data-in="@them-0.1" data-anim="grow" data-dur="0.6"></div>
+</div></section>
+
+<!-- 2. Chart: the classic approach, more ads -->
+<section class="scene" data-type="Chart" data-start="@the usual-0.1"><div class="cam">
+  <div class="safe">
+    <div class="tag txt" data-in="@the usual" data-anim="pop">The usual fix</div>
+    <div class="h1 txt" data-in="@more ads-0.2">More ads</div>
+    <div class="card" style="padding:40px 50px 30px;margin-top:10px">
+      <div class="p2 mut txt" style="text-align:left;margin-bottom:20px" data-in="@the usual+0.2" data-anim="fade">Ad spend</div>
+      <div class="bars">
+        <div class="bar" style="height:30%" data-in="@the usual+0.3" data-anim="rise"></div>
+        <div class="bar" style="height:45%" data-in="@the usual+0.55" data-anim="rise"></div>
+        <div class="bar" style="height:62%" data-in="@the usual+0.8" data-anim="rise"></div>
+        <div class="bar" style="height:80%" data-in="@the usual+1.05" data-anim="rise"></div>
+        <div class="bar" style="height:100%" data-in="@the usual+1.3" data-anim="rise"></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 3. Object: the forgotten records -->
+<section class="scene" data-type="Records" data-start="@while-0.1"><div class="cam">
+  <div class="safe" style="gap:22px">
+    <div class="h1 txt" data-in="@hundreds-0.3">Hundreds of files</div>
+    <div class="card rec" data-in="@while" data-anim="drop"><div class="av">A</div><div style="text-align:left;flex:1"><div style="display:flex;align-items:center;gap:18px"><span class="nm txt">Alex P.</span><span class="pill txt">No messages</span></div><div class="lv txt">Last visit: 1 year ago</div></div></div>
+    <div class="card rec" data-in="@while+0.3" data-anim="drop"><div class="av">S</div><div style="text-align:left;flex:1"><div style="display:flex;align-items:center;gap:18px"><span class="nm txt">Sam R.</span><span class="pill txt">No messages</span></div><div class="lv txt">Last visit: 1 year ago</div></div></div>
+    <div class="h2 txt" style="margin-top:24px" data-in="@never-0.2" data-anim="pop">Messages sent: <span class="g">0</span></div>
+  </div>
+</div></section>
+
+<!-- 4. Phone: the automation writes, the patient replies -->
+<section class="scene" data-type="Phone" data-start="@acme-0.1"><div class="cam">
+  <div class="center h3 txt" style="top:420px" data-in="@acme-0.1" data-anim="down">It <span class="g">texts them</span></div>
+  <div class="phone" style="top:560px;width:740px;margin-left:-370px;height:1400px"><div class="island"></div><div class="screen">
+    <div class="wa-head"><div class="av">A</div><div><div class="nm">Alex P.</div><div class="st">Patient</div></div></div>
+    <div class="wa-body">
+      <div class="bub out" data-in="@acme-0.05" data-anim="up"><span class="by">Sent by Acme Assist</span><span class="txt">Hi Alex, it has been a while. Shall we save you a spot?</span><span class="tm">11:02</span></div>
+      <div class="bub in typing" data-in="@for you-0.1" data-out="@if they-0.3" data-anim="up"><i></i><i></i><i></i></div>
+      <div class="bub in" data-in="@if they-0.1" data-anim="up"><span class="txt">Yes! Thursday afternoon?</span><span class="tm">11:09</span></div>
+    </div>
+  </div></div>
+</div></section>
+
+<!-- 5. Calendar: the visit is booked -->
+<section class="scene" data-type="Calendar" data-start="@it books-0.1"><div class="cam">
+  <div class="card agenda" style="top:520px">
+    <div class="ttl"><span class="txt">Calendar</span><span class="p2 mut txt">This week</span></div>
+    <div class="grid">
+      <div></div><div class="dh txt">Mon</div><div class="dh txt">Tue</div><div class="dh txt">Wed</div><div class="dh txt">Thu</div><div class="dh txt">Fri</div>
+      <div class="hr">3 PM</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="hr">4 PM</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="hr">5 PM</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="hr">6 PM</div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+      <div class="ev old ev-pos" style="--c:0;--r:1">Visit</div>
+      <div class="ev old ev-pos" style="--c:1;--r:0">Visit</div>
+      <div class="ev old ev-pos" style="--c:2;--r:3">Visit</div>
+      <div class="ev ev-pos" style="--c:3;--r:2" data-in="@it books" data-anim="drop"><span class="txt">Alex</span></div>
+    </div>
+  </div>
+  <div class="stamp txt" style="left:560px;top:1020px" data-in="@visit+0.0" data-anim="stamp">Booked</div>
+  <div class="center h3 txt" style="top:1290px" data-in="@in your calendar-0.2">In <span class="g">your calendar</span></div>
+</div></section>
+
+<!-- 6. Close: brand line and keyword, holding still -->
+<section class="scene" data-type="Close" data-start="@leave no-0.1" data-freeze="@message us-0.15"><div class="cam">
+  <div class="safe" style="gap:18px">
+    <div class="h2 txt">Leave no one <span class="g">without an answer.</span></div>
+    <div class="ul" style="width:520px" data-in="@answer-0.1" data-anim="grow" data-dur="0.6"></div>
+    <div class="p1 txt" style="margin-top:60px" data-in="@message us-0.15" data-anim="pop">Message us</div>
+    <div class="g txt" style="font-weight:800;font-size:250px;line-height:1;letter-spacing:-6px" data-in="@message us-0.15" data-anim="pop">DEMO</div>
+    <div class="endlogo" data-in="@see it-0.3" data-anim="fade">Acme<span class="g">Assist</span></div>
+  </div>
+</div></section>
+
+<script src="words.js"></script>
+<script src="../../../engine/engine.js"></script>
+<script>
+  window.SFX = [
+    { t: "@acme-0.05", s: "send" },
+    { t: "@if they-0.1", s: "notify" },
+    { t: "@it books+0.15", s: "done" },
+  ];
+  R.init();
+</script>
+</body></html>

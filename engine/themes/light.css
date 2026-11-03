@@ -1,0 +1,23 @@
+/* Light theme. Load after engine.css or slides.css: same accent and typeface, light background. */
+:root{
+  --bg:#F4F8F9; --sf:#FFFFFF; --sf2:#E9F4F2; --line:#D9E7E8;
+  --ink:#0F2130; --mut:#4C6478;
+  /* Messaging-app mock in light mode */
+  --wa-bg:#EFEAE2; --wa-head:#F0F2F5; --wa-in:#FFFFFF; --wa-out:#D9FDD3; --wa-time:#667781;
+  --wa-ink:#111B21; --wa-out-time:#667781; --wa-by:#0F766E;
+  --slot:#DFECEC; --soft:#3F5668; --stroke:#93AEB6; --box:#C8DDDD; --pillow:#A7F3D0; --mini-bg:#FFFFFF;
+  --frame:#18232C; --frame-in:#3A4F63; --frame-bg:#18232C; --stamp:#0F2130; --shadow:rgba(20,70,90,.14);
+  --lock-bg:radial-gradient(120% 80% at 30% 10%,#D5F5E9 0%,#D6EEF9 55%,#F4FBFC 100%);
+  --lock-ink:#0F2130; --lock-clock:#0F2130; --notif-bg:rgba(255,255,255,.94); --notif-who:#0F2130;
+  --blob-op:.20; --glow-op:.16;
+}
+html,body{background:var(--bg)}
+/* Cards with a gradient background keep white text */
+.agenda .ev:not(.old):not(.free){color:#fff}
+.vs .new{background:linear-gradient(160deg,rgba(16,185,129,.16),rgba(14,165,233,.12))!important;border-color:#7FD8C4!important}
+.bub.out .tm{color:var(--wa-out-time)}
+.ok{color:#1A7F37!important}
+.row .bub.out{border:1px solid #BFE8B6}
+.bub.in{box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.wa-head{border-bottom:1px solid #E1E4E8}
+.notif .ico:after{border-color:#fff}

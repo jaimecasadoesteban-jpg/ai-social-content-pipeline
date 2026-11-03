@@ -1,0 +1,36 @@
+/* Gradient theme: full-screen brand gradient, white cards, keywords highlighted like a marker. */
+:root{
+  --bg:#0E9DB8; --sf:#FFFFFF; --sf2:#ECF8F6; --line:rgba(255,255,255,.38);
+  --ink:#FFFFFF; --mut:#DDF5F5;
+  --wa-bg:#EFEAE2; --wa-head:#F0F2F5; --wa-in:#FFFFFF; --wa-out:#D9FDD3; --wa-time:#667781;
+  --wa-ink:#111B21; --wa-out-time:#667781; --wa-by:#0B6E72;
+  --slot:#E3F1F0; --soft:#3F5668; --stroke:#94C7C4; --box:#CDE7E5; --pillow:#A7F3D0; --mini-bg:#FFFFFF;
+  --frame:#12222A; --frame-in:#2C434D; --frame-bg:#12222A; --stamp:#FFFFFF; --shadow:rgba(5,50,70,.28);
+  --lock-bg:radial-gradient(120% 80% at 30% 10%,#D5F5E9 0%,#D6EEF9 55%,#F4FBFC 100%);
+  --lock-ink:#0F2130; --lock-clock:#0F2130; --notif-bg:rgba(255,255,255,.95); --notif-who:#0F2130;
+  --blob-op:.22; --glow-op:.22;
+  --page-bg:linear-gradient(160deg,#10B981 0%,#0E9DB8 50%,#0EA5E9 100%);
+}
+html,body,#bg{background:var(--page-bg)}
+.slide{background:var(--page-bg)!important}
+#bg .b1,#bg .b2,.slide .glow1,.slide .glow2{background:radial-gradient(circle,rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 62%)!important}
+/* Dark text inside white cards */
+.card,.chip,.win,.sign,.dd:not(.on),.persona,.book,.vs>div,.check div,.agenda,.ficha{
+  --ink:#0F2130; --mut:#4C6478; --line:#DCEDEB; color:var(--ink)}
+.vs .new{background:#FFFFFF!important;border:3px solid #FFFFFF!important}
+.vs .old{background:rgba(255,255,255,.88)!important}
+/* Keyword: white marker with accent-coloured text */
+.g{background:#FFFFFF!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#0B6E72!important;
+  -webkit-text-fill-color:#0B6E72;padding:0 .14em;border-radius:.14em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.card .g,.chip .g,.win .g,.vs>div .g,.check .g,.agenda .g,.ficha .g{background:var(--grad)!important;-webkit-background-clip:text!important;background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent;padding:0}
+.ul,.vline,.seg i{background:#FFFFFF!important}
+.tag,.slide .kick{background:#FFFFFF!important;color:#0B6E72!important}
+.dd.on{background:#FFFFFF!important;color:#0B6E72}
+.agenda .ev:not(.old):not(.free){color:#fff}
+.bub.in{box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.wa-head{border-bottom:1px solid #E1E4E8}
+.ok{color:#1A7F37!important}
+/* The marker needs extra line spacing */
+.h0,.h1,.h2,.slide .tt{line-height:1.24!important}
+.stamp{background:#FFFFFF;color:#0B6E72!important;border-color:#0B6E72!important;box-shadow:0 10px 30px var(--shadow)}

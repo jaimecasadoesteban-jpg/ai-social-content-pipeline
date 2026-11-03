@@ -1,0 +1,114 @@
+{
+  "week_label": "Demo week (fictional brand: Acme Assist)",
+  "keyword": "DEMO",
+  "days": [
+    {
+      "key": "monday",
+      "label": "Monday"
+    },
+    {
+      "key": "tuesday",
+      "label": "Tuesday"
+    }
+  ],
+  "reels": {
+    "monday": {
+      "folder": "1-monday",
+      "hour": "21:00",
+      "topic": "Patients who stopped coming",
+      "hook_type": "Revelation",
+      "caption": [
+        "Your next patients are already in your records. Someone just has to write to them.",
+        "How many people came once and never heard from you again?",
+        "Message us DEMO and see it working.",
+        "#automation #smallbusiness"
+      ],
+      "scores": {
+        "hook": [
+          8,
+          "s0: the sentence works alone, but no image reinforces it"
+        ],
+        "readability": [
+          8,
+          "s17-19: calendar labels are small (not key information)"
+        ],
+        "motion": [
+          8,
+          "continuous camera; something new enters at least every 2 s"
+        ],
+        "variety": [
+          9,
+          "6 shots of 6 different types"
+        ],
+        "composition": [
+          8,
+          "s14-16: lower half of the phone is empty"
+        ],
+        "brand": [
+          9,
+          "same colours, type and logo in every shot"
+        ]
+      }
+    },
+    "tuesday": {
+      "folder": "2-tuesday",
+      "hour": "21:00",
+      "topic": "The Saturday evening message",
+      "hook_type": "Scene with a time",
+      "short": true,
+      "caption": [
+        "Whoever writes on a Saturday evening will not wait until Monday.",
+        "What happens to the messages you get when you are closed?",
+        "Message us DEMO and see it working.",
+        "#automation #smallbusiness"
+      ],
+      "scores": {
+        "hook": [
+          8,
+          "s0: the time is clear, but the promise is only implied"
+        ],
+        "readability": [
+          8,
+          "s1-3: notification text is the smallest on screen"
+        ],
+        "motion": [
+          8,
+          "new notification, bubbles and reply every 1-2 s"
+        ],
+        "variety": [
+          9,
+          "4 shots of 4 different types"
+        ],
+        "composition": [
+          8,
+          "s0-3: lower half of the lock screen is empty"
+        ],
+        "brand": [
+          9,
+          "same type and logo; the light theme keeps the accent colours"
+        ]
+      }
+    }
+  },
+  "carousels": {
+    "tuesday": {
+      "folder": "2-tuesday",
+      "hour": "09:00",
+      "topic": "Patients who stopped coming, in 3 steps",
+      "caption": [
+        "Three steps to win back patients who stopped coming.",
+        "Which step does your clinic skip today?",
+        "Message us DEMO and see it working."
+      ]
+    }
+  },
+  "linkedin": {
+    "tuesday": {
+      "folder": "2-tuesday",
+      "hour": "08:30",
+      "from_day": "monday",
+      "topic": "Patients who stopped coming",
+      "text": "Many clinics hold hundreds of records of people who came once and never came back.\n\nThe usual answer is to spend more on ads and chase new patients. Meanwhile, the people who already trusted the clinic never get a single message. Nobody decided to ignore them. There is simply no time left after a full day of calls and appointments.\n\nA short, personal text can restart that conversation, and that is the kind of repetitive work automation handles well, leaving the team free to focus on the person in front of them.\n\nHave you ever tried to reconnect with past customers? How did it go?"
+    }
+  }
+}

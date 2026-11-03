@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- Fictional demo content. Short reel with no voice: exercises the silent path and the light theme. -->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../../engine/engine.css">
+<link rel="stylesheet" href="../../../engine/themes/light.css">
+<style>
+  .phone .bub{font-size:46px}
+  .phone .bub .tm,.phone .bub .by{font-size:28px}
+</style></head>
+<body>
+<div id="bg"><div class="blob b1"></div><div class="blob b2"></div></div>
+<div class="logo">Acme<span class="g">Assist</span></div>
+
+<!-- 1. Lock screen: the hook is the time on the clock -->
+<section class="scene" data-type="Lock screen" data-start="0"><div class="cam">
+  <div class="center h2 txt" style="top:385px">Saturday, <span class="g">7:04 PM.</span></div>
+  <div class="phone" style="top:530px;width:740px;margin-left:-370px;height:1400px"><div class="island"></div><div class="screen lock">
+    <div class="day">Saturday</div><div class="clock">7:04</div>
+    <div class="notif" style="top:420px" data-in="0.5" data-anim="down"><div class="ico"></div><div style="flex:1"><div class="who"><b class="txt">Jordan</b><span>now</span></div><div class="msg txt">Hi! Do you have a spot next week?</div></div></div>
+    <div class="notif" style="top:640px" data-in="2.2" data-anim="down"><div class="ico"></div><div style="flex:1"><div class="who"><b class="txt">Jordan</b><span>now</span></div><div class="msg txt">Anyone there?</div></div></div>
+  </div></div>
+</div></section>
+
+<!-- 2. Big statement: the classic approach -->
+<section class="scene" data-type="Big statement" data-start="3.6"><div class="cam">
+  <div class="safe">
+    <div class="tag txt" data-in="3.7" data-anim="pop">The usual way</div>
+    <div class="h1 txt" data-in="3.9">You answer on <span class="g">Monday.</span></div>
+    <div class="p1 mut txt" data-in="4.7">By then, they booked elsewhere.</div>
+  </div>
+</div></section>
+
+<!-- 3. Chat: answered at once -->
+<section class="scene" data-type="Chat" data-start="6.6"><div class="cam">
+  <div class="center h3 txt" style="top:420px" data-in="6.7" data-anim="down">Answered <span class="g">right away</span></div>
+  <div class="phone" style="top:560px;width:740px;margin-left:-370px;height:1400px"><div class="island"></div><div class="screen">
+    <div class="wa-head"><div class="av">J</div><div><div class="nm">Jordan</div><div class="st">online</div></div></div>
+    <div class="wa-body">
+      <div class="bub in"><span class="txt">Hi! Do you have a spot next week?</span><span class="tm">7:04 PM</span></div>
+      <div class="bub out" data-in="7.2" data-anim="up"><span class="by">Sent by Acme Assist</span><span class="txt">Hi Jordan! Tuesday at 5 PM is open. Shall I book it?</span><span class="tm">7:04 PM</span></div>
+      <div class="bub in" data-in="9.0" data-anim="up"><span class="txt">Yes, please!</span><span class="tm">7:05 PM</span></div>
+    </div>
+  </div></div>
+</div></section>
+
+<!-- 4. Close: the keyword, holding still -->
+<section class="scene" data-type="Close" data-start="10.8" data-freeze="11.3"><div class="cam">
+  <div class="safe" style="gap:18px">
+    <div class="p1 txt" data-in="10.9" data-anim="pop">Message us</div>
+    <div class="g txt" style="font-weight:800;font-size:250px;line-height:1;letter-spacing:-6px" data-in="10.9" data-anim="pop">DEMO</div>
+    <div class="endlogo">Acme<span class="g">Assist</span></div>
+  </div>
+</div></section>
+
+<script src="../../../engine/engine.js"></script>
+<script>
+  window.SFX = [{ t: 0.5, s: "notify" }, { t: 7.2, s: "send" }, { t: 10.9, s: "done" }];
+  R.init({ dur: 13.4 });
+</script>
+</body></html>

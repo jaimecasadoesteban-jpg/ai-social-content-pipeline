@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- Fictional demo content. Same topic as Monday's reel, as steps. Uses the gradient theme. -->
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../../engine/slides.css">
+<link rel="stylesheet" href="../../../engine/themes/gradient.css">
+</head><body>
+<script>window.BRAND = { name: 'Acme', accent: 'Assist' };</script>
+<script src="../../../engine/slides-ui.js"></script>
+<script>
+const N = 6, SENT = 'Sent by Acme Assist';
+render([
+  UI.slide({ n: 1, total: N, big: true, title: 'Win back patients <span class="g">who stopped coming</span>',
+    extra: '<div class="tag" style="margin-top:34px;font-size:40px">In 3 steps →</div>', vt: 780,
+    vis: UI.records([['A', 'Alex P.', 'No messages', 'Last visit: 1 year ago'], ['S', 'Sam R.', 'No messages', 'Last visit: 1 year ago']]) }),
+  UI.slide({ n: 2, total: N, title: 'Two ways to fill a calendar', vt: 400,
+    vis: UI.versus('The usual way', 'Buy more ads to reach new people', UI.bars(), 'With automation', 'Reactivate <span class="g">your own patients</span>', UI.miniPhone('1')) }),
+  UI.slide({ n: 3, total: N, kick: 'Step 1', title: 'Open your records: <span class="g">they are there</span>', vt: 500,
+    vis: UI.records([['A', 'Alex P.', 'No messages', 'Last visit: 1 year ago'], ['S', 'Sam R.', 'No messages', 'Last visit: 1 year ago'], ['M', 'Morgan T.', 'No messages', 'Last visit: 2 years ago']]) }),
+  UI.bleed({ n: 4, total: N, kick: 'Step 2', title: 'Send each one <span class="g">a personal text</span>', vt: 470,
+    vis: UI.chat('Alex P.', 'online', [UI.bubble('out', 'Hi Alex, it has been a while. Shall we save you a spot?', '11:02', SENT), UI.bubble('in', 'Yes! Thursday afternoon?', '11:09')], 840) }),
+  UI.slide({ n: 5, total: N, kick: 'Step 3', title: 'If they reply, <span class="g">the visit gets booked</span>', vt: 540,
+    vis: UI.calendar('Calendar', 'This week', ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], ['3 PM', '4 PM', '5 PM', '6 PM'],
+      [[0, 1, 'Visit', 'old'], [1, 0, 'Visit', 'old'], [2, 3, 'Visit', 'old'], [3, 2, 'Alex']], 'Booked') }),
+  UI.closing({ n: 6, total: N, line: 'Leave no one <span class="g">without an answer.</span>', verb: 'Message us', keyword: 'DEMO', offer: 'See it working' }),
+]);
+</script></body></html>
